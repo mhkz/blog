@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -86,15 +86,19 @@
 
 
 
-<meta name="description" content="这是自己学习的足迹。。。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="墨虹客栈">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="什么是SharedPrefences?
+SharedPrefences的定义先来看看Android官方API对于SharedPreferences（以下简称SP）的定义：SP是通过getSharedPreferences(String,int)返回的用于访问和储存设置（Preferences，我本人理解为设置）数据的接口。对于许多特定的设置的数据集，存在一个单例的类能够将数据集给所有客户分享。修改">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SharedPrefences学习">
+<meta property="og:url" content="http://yoursite.com/2016/06/28/SharedPrefences学习/index.html">
 <meta property="og:site_name" content="墨虹客栈">
-<meta property="og:description" content="这是自己学习的足迹。。。">
+<meta property="og:description" content="什么是SharedPrefences?
+SharedPrefences的定义先来看看Android官方API对于SharedPreferences（以下简称SP）的定义：SP是通过getSharedPreferences(String,int)返回的用于访问和储存设置（Preferences，我本人理解为设置）数据的接口。对于许多特定的设置的数据集，存在一个单例的类能够将数据集给所有客户分享。修改">
+<meta property="og:updated_time" content="2016-06-28T13:04:39.773Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="墨虹客栈">
-<meta name="twitter:description" content="这是自己学习的足迹。。。">
+<meta name="twitter:title" content="SharedPrefences学习">
+<meta name="twitter:description" content="什么是SharedPrefences?
+SharedPrefences的定义先来看看Android官方API对于SharedPreferences（以下简称SP）的定义：SP是通过getSharedPreferences(String,int)返回的用于访问和储存设置（Preferences，我本人理解为设置）数据的接口。对于许多特定的设置的数据集，存在一个单例的类能够将数据集给所有客户分享。修改">
 
 
 
@@ -115,9 +119,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/28/SharedPrefences学习/"/>
 
-  <title> 墨虹客栈 </title>
+  <title> SharedPrefences学习 | 墨虹客栈 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -138,9 +142,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,9 +239,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -259,10 +261,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/06/28/SharedPrefences学习/" itemprop="url">
-                  SharedPrefences学习
-                </a>
+                SharedPrefences学习
               
             
           </h1>
@@ -321,280 +320,61 @@
       
 
       
-        
-          
-            <p></p><h1>什么是SharedPrefences?</h1><p></p>
+        <p></p><h1>什么是SharedPrefences?</h1><p></p>
 <h3>SharedPrefences的定义</h3><br>先来看看Android官方API对于SharedPreferences（以下简称SP）的定义：SP是通过getSharedPreferences(String,int)返回的用于访问和储存设置（Preferences，我本人理解为设置）数据的接口。对于许多特定的设置的数据集，存在一个单例的类能够将数据集给所有客户分享。修改设置数据必须通过SharedPreferences.Editor对象来确保设置的值保持一个一致的状态并且当它们提交时能受控制。SP对象通过get()方法必须在Application中保持一成不变。简单来说，SharedPreferences是一种轻型的数据存储方式，基于XML文件存储key-value键值对（只能存储简单的类型）数据，常用来存储一些简单的配置信息。<br><h3>SharedPrefencd的使用步骤</h3><br>1、获得SharedPrefences对象<br>2、获得Edit对象<br>3、通过putXxx方法来存放<key,value值>，<br>4、通过Edit的commit方法来提交存放<key,value><br>通过上面的定义，我们可以得知，sharedprefences只能获取数据，但是却不能保存数据，这一点我们要特别注意<br><h3>代码的实现</h3><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">public class MainActivity extends Activity &#123;</span><br><span class="line">    private Button btn_storage,btn_remove,btn_jump;</span><br><span class="line">    private EditText editText;</span><br><span class="line">    private SharedPreferences sharedPreferences;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        //实例化SharedPreferences</span><br><span class="line">        sharedPreferences = this.getSharedPreferences(<span class="string">"test"</span>,this.MODE_PRIVATE);</span><br><span class="line">        <span class="built_in">set</span>ContentView(R.layout.layout_main);</span><br><span class="line">        editText= (EditText) findViewById(R.id.edit_text);</span><br><span class="line">        btn_storage = (Button) findViewById(R.id.button_storage);</span><br><span class="line">        btn_remove = (Button) findViewById(R.id.button_remove);</span><br><span class="line">        btn_jump = (Button) findViewById(R.id.button_jump);</span><br><span class="line">        //第一步，首先是得到Sharedpreferences的对象,并且通过getSharedPreferenced创建一个名字为<span class="built_in">test</span>的存储文件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        btn_storage.setOnClickListener(new View.<span class="function"><span class="title">OnClickListener</span></span>() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onClick(View view) &#123;</span><br><span class="line">                 //第二步,实例化SharePreferencesd.Edit对象</span><br><span class="line">                SharedPreferences.Editor editor = sharedPreferences.edit();</span><br><span class="line">                //第三步，通过putString方法来存入数据，注意，(key,value)形式</span><br><span class="line">                //并且通过editText来回显</span><br><span class="line">                editor.putString(<span class="string">"name"</span>,editText.getText().toString());</span><br><span class="line">                editor.commit();</span><br><span class="line">                Toast.makeText(MainActivity.this,<span class="string">"数据已经被存储"</span>,Toast.LENGTH_SHORT).show();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        btn_jump.setOnClickListener(new View.<span class="function"><span class="title">OnClickListener</span></span>() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onClick(View view) &#123;</span><br><span class="line">                Intent intent = new Intent(MainActivity.this,SecondActivity.class);</span><br><span class="line">                startActivity(intent);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        //删除数据</span><br><span class="line">        btn_remove.setOnClickListener(new View.<span class="function"><span class="title">OnClickListener</span></span>() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onClick(View view) &#123;</span><br><span class="line">                SharedPreferences.Editor editor = sharedPreferences.edit();</span><br><span class="line">                editor.remove(<span class="string">"name"</span>);</span><br><span class="line">                editor.commit();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br><h3>接下来是获取数据的界面<h3><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class SecondActivity extends Activity &#123;</span><br><span class="line">    private TextView textView;</span><br><span class="line">    private SharedPreferences sharedPreferences;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        <span class="built_in">set</span>ContentView(R.layout.layout_second);</span><br><span class="line">        sharedPreferences = this.getSharedPreferences(<span class="string">"test"</span>,this.MODE_PRIVATE);</span><br><span class="line">        textView= (TextView) findViewById(R.id.text_view);</span><br><span class="line">        String data = sharedPreferences.getString(<span class="string">"name"</span>,<span class="string">"NULL"</span>);</span><br><span class="line">        textView.setText(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br><h3>接下来是布局代码</h3><br><h5>主布局</h5><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span>?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    android:orientation=<span class="string">"vertical"</span> android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">    android:layout_height=<span class="string">"match_parent"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:id=<span class="string">"@+id/edit_text"</span></span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:text=<span class="string">"请输入您要保存的内容"</span></span><br><span class="line">        android:hint=<span class="string">"true"</span></span><br><span class="line">        /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;Button</span><br><span class="line">        android:id=<span class="string">"@+id/button_storage"</span></span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:text=<span class="string">"存储"</span></span><br><span class="line">        /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;Button</span><br><span class="line">        android:id=<span class="string">"@+id/button_remove"</span></span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:text=<span class="string">"删除"</span></span><br><span class="line">        /&gt;</span><br><span class="line">    &lt;Button</span><br><span class="line">        android:id=<span class="string">"@+id/button_jump"</span></span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:text=<span class="string">"跳转"</span></span><br><span class="line">        /&gt;</span><br><span class="line">&lt;/LinearLayout&gt;</span><br></pre></td></tr></table></figure><br><br><h5>第二个布局</h5><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class SecondActivity extends Activity &#123;</span><br><span class="line">    private TextView textView;</span><br><span class="line">    private SharedPreferences sharedPreferences;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        <span class="built_in">set</span>ContentView(R.layout.layout_second);</span><br><span class="line">        sharedPreferences = this.getSharedPreferences(<span class="string">"test"</span>,this.MODE_PRIVATE);</span><br><span class="line">        textView= (TextView) findViewById(R.id.text_view);</span><br><span class="line">        String data = sharedPreferences.getString(<span class="string">"name"</span>,<span class="string">"NULL"</span>);</span><br><span class="line">        textView.setText(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br><h3>总结</h3>
 </h3></h3></key,value></key,value值>
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/28/jdk环境变量配置/" itemprop="url">
-                  jdk环境变量配置
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-28T14:00:59+08:00" content="2016-06-28">
-              2016-06-28
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/Android/" rel="tag">#Android</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p></p><h1>jdk环境变量配置<h1><p></p>
-<p></p><h3>下载安装jdk包，安装过程中注意安装到其它盘，最好不要安装到C盘<h3><p></p>
-<p></p><h3>打开我的电脑–&gt;属性–&gt;高级–&gt;环境变量<h3><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">变量名：JAVA_HOME </span><br><span class="line">变量值：C:\Program Files\Java\jdk1.7.0</span><br><span class="line">变量名：CLASSPATH </span><br><span class="line">变量值：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</span><br></pre></td></tr></table></figure><p></p>
-<p></p><h3>其中变量值为你自己安装jdk的文件目录这里要注意<h3><p></p>
-<p></p><h3>选择“系统变量”中变量名为“Path”的环境变量<h3><br>双击该变量，把JDK安装路径中bin目录的绝对路径，添加到Path变量的值中，并使用半角的分号和已有的路径进行分隔。<br>变量名：Path<br>变量值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;<br>这是java的环境配置，配置完成后直接启动eclipse，它会自动完成java环境的配置<p></p>
-<p></p><h3>检查：环境的配置是否ok<h3><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a、java -version</span><br><span class="line">b、javac</span><br><span class="line">c、java</span><br></pre></td></tr></table></figure><p></p>
-</h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h1></h1>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/06/28/jdk环境变量配置/" rel="next" title="jdk环境变量配置">
+                <i class="fa fa-chevron-left"></i> jdk环境变量配置
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/06/28/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-28T12:27:31+08:00" content="2016-06-28">
-              2016-06-28
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -602,6 +382,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -621,8 +405,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -679,6 +472,19 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">什么是SharedPrefences?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.1.</span> <span class="nav-text">SharedPrefences的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.2.</span> <span class="nav-text">SharedPrefencd的使用步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.3.</span> <span class="nav-text">代码的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.4.</span> <span class="nav-text">接下来是获取数据的界面12345678910111213public class SecondActivity extends Activity {    private TextView textView;    private SharedPreferences sharedPreferences;    @Override    protected void onCreate(Bundle savedInstanceState) {        super.onCreate(savedInstanceState);        setContentView(R.layout.layout_second);        sharedPreferences = this.getSharedPreferences("test",this.MODE_PRIVATE);        textView= (TextView) findViewById(R.id.text_view);        String data = sharedPreferences.getString("name","NULL");        textView.setText(data);    }}接下来是布局代码主布局123456789101112131415161718192021222324252627282930313233<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    android:orientation="vertical" android:layout_width="match_parent"    android:layout_height="match_parent">    <EditText        android:id="@+id/edit_text"        android:layout_width="match_parent"        android:layout_height="wrap_content"        android:text="请输入您要保存的内容"        android:hint="true"        />    <Button        android:id="@+id/button_storage"        android:layout_width="match_parent"        android:layout_height="wrap_content"        android:text="存储"        />    <Button        android:id="@+id/button_remove"        android:layout_width="match_parent"        android:layout_height="wrap_content"        android:text="删除"        />    <Button        android:id="@+id/button_jump"        android:layout_width="match_parent"        android:layout_height="wrap_content"        android:text="跳转"        /></LinearLayout>第二个布局12345678910111213public class SecondActivity extends Activity {    private TextView textView;    private SharedPreferences sharedPreferences;    @Override    protected void onCreate(Bundle savedInstanceState) {        super.onCreate(savedInstanceState);        setContentView(R.layout.layout_second);        sharedPreferences = this.getSharedPreferences("test",this.MODE_PRIVATE);        textView= (TextView) findViewById(R.id.text_view);        String data = sharedPreferences.getString("name","NULL");        textView.setText(data);    }}总结
+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.5.</span> <span class="nav-text">12345678910111213public class SecondActivity extends Activity {    private TextView textView;    private SharedPreferences sharedPreferences;    @Override    protected void onCreate(Bundle savedInstanceState) {        super.onCreate(savedInstanceState);        setContentView(R.layout.layout_second);        sharedPreferences = this.getSharedPreferences("test",this.MODE_PRIVATE);        textView= (TextView) findViewById(R.id.text_view);        String data = sharedPreferences.getString("name","NULL");        textView.setText(data);    }}接下来是布局代码主布局123456789101112131415161718192021222324252627282930313233<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    android:orientation="vertical" android:layout_width="match_parent"    android:layout_height="match_parent">    <EditText        android:id="@+id/edit_text"        android:layout_width="match_parent"        android:layout_height="wrap_content"        android:text="请输入您要保存的内容"        android:hint="true"        />    <Button        android:id="@+id/button_storage"        android:layout_width="match_parent"        android:layout_height="wrap_content"        android:text="存储"        />    <Button        android:id="@+id/button_remove"        android:layout_width="match_parent"        android:layout_height="wrap_content"        android:text="删除"        />    <Button        android:id="@+id/button_jump"        android:layout_width="match_parent"        android:layout_height="wrap_content"        android:text="跳转"        /></LinearLayout>第二个布局12345678910111213public class SecondActivity extends Activity {    private TextView textView;    private SharedPreferences sharedPreferences;    @Override    protected void onCreate(Bundle savedInstanceState) {        super.onCreate(savedInstanceState);        setContentView(R.layout.layout_second);        sharedPreferences = this.getSharedPreferences("test",this.MODE_PRIVATE);        textView= (TextView) findViewById(R.id.text_view);        String data = sharedPreferences.getString("name","NULL");        textView.setText(data);    }}总结
+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.6.</span> <span class="nav-text">接下来是布局代码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.6.0.1.</span> <span class="nav-text">主布局</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.6.0.2.</span> <span class="nav-text">第二个布局</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.7.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -782,6 +588,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
