@@ -14,6 +14,6 @@ jobs:
       uses: mhkz/blog@master
       env:
         ACCESS_TOKEN: ${{ secrets.myblog }}
-        BRANCH: gh-pages
+        BRANCH: master
         FOLDER: .vuepress/dist
         BUILD_SCRIPT: npm install && npm run build
