@@ -1,4 +1,4 @@
-name: build blog
+name: myblog
 on:
   push:
     branches:
@@ -15,5 +15,5 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.myblog }}
         BRANCH: gh-pages
-        FOLDER: build
+        FOLDER: .vuepress/dist
         BUILD_SCRIPT: npm install && npm run build
