@@ -1,5 +1,6 @@
 module.exports = {
     port: 3001,
+    base: '/blog/',
     theme: 'reco',
     title: '博客',
     description: '总结',
