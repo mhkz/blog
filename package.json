@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-medium-zoom": "^1.4.0",
+    "commitizen": "^4.0.3",
+    "vuepress": "^1.4.0",
+    "vuepress-theme-reco": "^1.2.2"
+  }
+}
