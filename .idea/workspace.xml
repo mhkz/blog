@@ -20,23 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f0aa9f6-4429-455a-bfb0-399121731bd2" name="Default Changelist" comment=".">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/styles/index.styl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/algorithm/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/csapp/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode-algorithm/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode-algorithm/docs/1.两数之和.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/leetcode-shell/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/life/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/life/docs/1. 鲍普扬律师.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/linux/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/year-end-summary/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/action.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/action.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594946004552</updated>
-      <workItem from="1594946006479" duration="995000" />
+      <workItem from="1594946006479" duration="1424000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1594946065949</created>
@@ -84,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594946635141</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=".">
+      <created>1594951799088</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594951799088</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,10 +98,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="331" y="185" key="Vcs.Push.Dialog.v2" timestamp="1594946638155">
-      <screen x="0" y="23" width="1440" height="839" />
+    <state x="441" y="218" key="Vcs.Push.Dialog.v2" timestamp="1594951801043">
+      <screen x="0" y="23" width="1920" height="1010" />
     </state>
     <state x="331" y="185" key="Vcs.Push.Dialog.v2/0.23.1440.839@0.23.1440.839" timestamp="1594946638155" />
+    <state x="441" y="218" key="Vcs.Push.Dialog.v2/0.23.1920.1010@0.23.1920.1010" timestamp="1594951801043" />
     <state x="534" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594946054477">
       <screen x="0" y="23" width="1440" height="839" />
     </state>
