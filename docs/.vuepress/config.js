@@ -9,7 +9,7 @@ module.exports = {
                 text: 'leetcode系列',
                 items: [{
                     text: '题库系列',
-                    link: '/leetcode-algorithm/'
+                    link: '/leetcode/'
                 }]
             },
             {
@@ -60,7 +60,7 @@ module.exports = {
             }
         ],
         sidebar: {
-            '/leetcode-algorithm/': getLeetcode('算法', '数据库', 'shell', '多线程')
+            '/leetcode/': getLeetcode('算法', '数据库', 'shell', '多线程')
         }
     }
 }
@@ -71,13 +71,15 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
             title: groupA,
             collapsable: false,
             children: [
-                'docs/1.两数之和',
+                'docs/1.两数之和.md',
             ]
         },
         {
             title: groupB,
             collapsable: false,
-            children: []
+            children: [
+                'docs/175.【简单】组合两表.md'
+            ]
         },
         {
             title: groupC,
