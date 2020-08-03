@@ -71,8 +71,8 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
             title: groupA,
             collapsable: false,
             children: [
-                'docs/1.【简单】两数之和.md',
-                'docs/7.【简单】整数反转'
+                'docs/1.【简答】两数之和.md',
+                'docs/7.【简单】整数反转.md'
             ]
         },
         {
