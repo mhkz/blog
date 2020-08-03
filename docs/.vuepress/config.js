@@ -72,7 +72,9 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
             collapsable: false,
             children: [
                 'docs/1.两数之和.md',
-                'docs/7.整数反转.md'
+                'docs/7.整数反转.md',
+                'docs/9.回文数.md',
+                'docs/13.罗马数字转整数.md',
             ]
         },
         {
