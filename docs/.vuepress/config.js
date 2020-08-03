@@ -71,15 +71,17 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
             title: groupA,
             collapsable: false,
             children: [
-                'docs/1.【简答】两数之和.md',
-                'docs/7.【简单】整数反转.md'
+                'docs/1.两数之和.md',
+                'docs/7.整数反转.md'
             ]
         },
         {
             title: groupB,
             collapsable: false,
             children: [
-                'docs/175.【简单】组合两表.md'
+                'docs/175.组合两表.md',
+                'docs/176.第二高的薪水.md',
+                'docs/177.第N高薪水.md',
             ]
         },
         {
