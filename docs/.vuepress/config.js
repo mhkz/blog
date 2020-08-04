@@ -74,7 +74,8 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
                 'docs/7.整数反转.md',
                 'docs/9.回文数.md',
                 'docs/13.罗马数字转整数.md',
-                'docs/14. 最长公共前缀.md'
+                'docs/14. 最长公共前缀.md',
+                'docs/20.有效的括号.md'
             ]
         },
         {
