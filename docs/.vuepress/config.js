@@ -2,15 +2,14 @@ module.exports = {
     port: 3001,
     base: '/blog/',
     theme: 'reco',
+    codeTheme: 'tomorrow',
     title: '博客',
     description: '总结',
     themeConfig: {
+        codeTheme: 'tomorrow',
         nav: [{
                 text: 'leetcode系列',
-                items: [{
-                    text: '题库系列',
-                    link: '/leetcode/'
-                }]
+                link: '/leetcode/'
             },
             {
                 text: '读书笔记',
@@ -75,6 +74,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
                 'docs/7.整数反转.md',
                 'docs/9.回文数.md',
                 'docs/13.罗马数字转整数.md',
+                'docs/14. 最长公共前缀.md'
             ]
         },
         {
