@@ -79,6 +79,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
                 'docs/21.合并两个有序链表.md',
                 'docs/26.排除数组中的重复项.md',
                 'docs/27.移除元素.md',
+                'doc/100.相同的树.md'
             ]
         },
         {
