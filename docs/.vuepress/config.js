@@ -73,15 +73,20 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
                 'docs/1.两数之和.md',
                 'docs/7.整数反转.md',
                 'docs/9.回文数.md',
+                'docs/11.盛最多容器的水.md',
                 'docs/13.罗马数字转整数.md',
                 'docs/14. 最长公共前缀.md',
+                'docs/15.三数之和.md',
                 'docs/20.有效的括号.md',
                 'docs/21.合并两个有序链表.md',
                 'docs/26.排除数组中的重复项.md',
                 'docs/27.移除元素.md',
                 'docs/28.实现strStr.md',
                 'docs/35.搜索插入位置.md',
-                'doc/100.相同的树.md'
+                'docs/100.相同的树.md',
+                'docs/175.组合两表.md',
+                'docs/176.第二高的薪水.md',
+                'docs/177.第N高薪水.md',
             ]
         },
         {
