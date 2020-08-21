@@ -87,6 +87,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
                 'docs/175.组合两表.md',
                 'docs/176.第二高的薪水.md',
                 'docs/177.第N高薪水.md',
+                'docs/168.缺失数字.md'
             ]
         },
         {
