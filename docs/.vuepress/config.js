@@ -77,6 +77,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
                 'docs/13.罗马数字转整数.md',
                 'docs/14. 最长公共前缀.md',
                 'docs/15.三数之和.md',
+                'docs/19.删除链表的倒数第N个节点.md',
                 'docs/20.有效的括号.md',
                 'docs/21.合并两个有序链表.md',
                 'docs/26.排除数组中的重复项.md',
@@ -84,10 +85,8 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
                 'docs/28.实现strStr.md',
                 'docs/35.搜索插入位置.md',
                 'docs/100.相同的树.md',
-                'docs/175.组合两表.md',
-                'docs/176.第二高的薪水.md',
-                'docs/177.第N高薪水.md',
-                'docs/168.缺失数字.md'
+                'docs/168.缺失数字.md',
+                'docs/206.反转链表.md'
             ]
         },
         {
