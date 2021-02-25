@@ -12,6 +12,10 @@ module.exports = {
                 link: '/leetcode/'
             },
             {
+                text: '买房攻略',
+                link: '/house/'
+            },
+            {
                 text: '读书笔记',
                 ariaLabel: '了解更多',
                 items: [{
@@ -59,7 +63,8 @@ module.exports = {
             }
         ],
         sidebar: {
-            '/leetcode/': getLeetcode('算法', '数据库', 'shell', '多线程')
+            '/leetcode/': getLeetcode('算法', '数据库', 'shell', '多线程'),
+            '/house/': getLife('买房笔记'),
         }
     }
 }
@@ -109,4 +114,15 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
             children: []
         }
     ]
+}
+
+function getLife(groupA) {
+    return [{
+        title: groupA,
+        collapsable: false,
+        children: [
+            'docs/01.郑州买房攻略.md',
+            'docs/02.新房注意事项.md',
+        ]
+    }]
 }
