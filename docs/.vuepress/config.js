@@ -13,7 +13,7 @@ module.exports = {
             },
             {
                 text: '买房攻略',
-                link: '/house/'
+                link: '/life/'
             },
             {
                 text: '读书笔记',
@@ -64,7 +64,7 @@ module.exports = {
         ],
         sidebar: {
             '/leetcode/': getLeetcode('算法', '数据库', 'shell', '多线程'),
-            '/house/': getLife('买房笔记'),
+            '/life/': getLife('买房笔记'),
         }
     }
 }
