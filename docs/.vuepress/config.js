@@ -16,7 +16,7 @@ module.exports = {
                 link: '/life/'
             },
             {
-                text: '读书笔记',
+                text: '架构之路',
                 ariaLabel: '了解更多',
                 items: [{
                         // text: '计算机类',
