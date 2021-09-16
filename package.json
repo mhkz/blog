@@ -1,4 +1,8 @@
 {
+  "name": "blog",
+  "version": "0.3.1",
+  "author": "justin",
+  "description": "moonNotes, 打造自己的知识库系统",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
