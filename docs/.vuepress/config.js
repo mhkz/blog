@@ -89,6 +89,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
                 'docs/27.移除元素.md',
                 'docs/28.实现strStr.md',
                 'docs/35.搜索插入位置.md',
+                'docs/58.最后一个单词的长度.md',
                 'docs/100.相同的树.md',
                 'docs/168.缺失数字.md',
                 'docs/206.反转链表.md'
