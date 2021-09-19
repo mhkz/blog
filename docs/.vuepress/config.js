@@ -63,17 +63,17 @@ module.exports = {
             }
         ],
         sidebar: {
-            '/leetcode/': getLeetcode('算法', '数据库', 'shell', '多线程'),
+            '/leetcode/': getLeetcode('算法', '数据库', 'shell', '多线程', '剑指offer'),
             '/life/': getLife('买房笔记'),
         }
     }
 }
 
 // leetcode笔记
-function getLeetcode(groupA, groupB, groupC, groupD) {
+function getLeetcode(groupA, groupB, groupC, groupD, groupF) {
     return [{
             title: groupA,
-            collapsable: false,
+            collapsable: true,
             children: [
                 'docs/1.两数之和.md',
                 'docs/7.整数反转.md',
@@ -97,7 +97,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         },
         {
             title: groupB,
-            collapsable: false,
+            collapsable: true,
             children: [
                 'docs/175.组合两表.md',
                 'docs/176.第二高的薪水.md',
@@ -106,13 +106,20 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         },
         {
             title: groupC,
-            collapsable: false,
+            collapsable: true,
             children: []
         },
         {
             title: groupD,
-            collapsable: false,
+            collapsable: true,
             children: []
+        },
+        {
+            title: groupF,
+            collapsable: true,
+            children: [
+                'docs/51.数组中的逆序对.md'
+            ]
         }
     ]
 }
