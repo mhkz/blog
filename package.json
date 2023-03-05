@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-medium-zoom": "^1.4.0",
-    "commitizen": "^4.0.3",
+    "commitizen": "^4.3.0",
     "vuepress": "^1.4.0",
     "vuepress-theme-reco": "^1.2.2"
   }
