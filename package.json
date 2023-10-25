@@ -1,0 +1,64 @@
+{
+  "name": "feng.guo-tech-blog",
+  "version": "1.0.0",
+  "author": "feng.guo",
+  "scripts": {
+    "dev": "vuepress dev . --open --host \"localhost\" --version=development",
+    "build": "vuepress build . --version=production",
+    "hotdev": "vuepress dev --temp .temp"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "@maginapp/vuepress-plugin-flowchart": "^1.0.2",
+    "@maginapp/vuepress-plugin-katex": "^1.0.11",
+    "@vite/vuepress-plugin-mathjax": "^1.1.0",
+    "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.4",
+    "@vuepress/plugin-docsearch": "^2.0.0-beta.67",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.61",
+    "@vuepress/plugin-register-components": "^1.9.10",
+    "@vuepress/plugin-shiki": "^2.0.0-beta.67",
+    "increase-memory-limit": "^1.0.7",
+    "vuepress": "1.8.2",
+    "vuepress-plugin-comment1": "^1.31.0-beta.1",
+    "vuepress-plugin-flowchart": "^1.5.0",
+    "vuepress-plugin-mathjax": "^1.2.8",
+    "vuepress-plugin-mermaidjs": "^1.9.0",
+    "vuepress-plugin-one-click-copy": "^1.0.6",
+    "vuepress-plugin-sponsor": "^1.0.0",
+    "vuepress-theme-reco": "1.6.10",
+    "watchpack": "^2.3.1"
+  },
+  "dependencies": {
+    "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/api-github-v4": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
+    "emailjs": "^4.0.1",
+    "font-awesome": "^4.7.0",
+    "leancloud-storage": "^4.15.2",
+    "markdown-it": "^12.3.2",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-mathjax3": "^4.0.0",
+    "nodemailer": "^6.8.0",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "shiki": "^0.14.4",
+    "shiki-themes": "^0.2.7",
+    "valine": "^1.5.1",
+    "vuepress-plugin-sitemap": "^2.3.1",
+    "vuepress-sidebar-atuo": "^1.0.4"
+  },
+  "description": "--- home: true heroImage: /hero.png heroImageStyle: {   maxWidth: '200px',   width: '100%',   display: block,   margin: '0 auto 5rem',   margin-top: '5rem',   background: '#fff',   borderRadius: '50%', } bgImageStyle: {   height: '450px' } isShowTitleInHome: false actionText: '快速开始 →' actionLink: '/blog/algorithm/' features: - title: 具象建模   details: 从2020年开始的知识编写，有一定的将抽象问题化为具体的能力，内容在阅读起来较为通俗易懂，在帮助自己可以复习自己所学的同时，也可以作为读者学习的一个小仓库 - title: 分类梳理   details: 对于所有的知识，都会进行三层以上的分类整合，在强大的目录功能下，可以快速获取到对应的知识，能专项提升能力 - title: 简洁明了   details: 采用了非blog模式，主体即导航栏的“技术知识”中分类好的一个个技术块，点开即为大的方向，可以直接进入",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhkz/blog"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhkz/blog/issues"
+  },
+  "homepage": "https://github.com/mhkz/blog#readme"
+}

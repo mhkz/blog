@@ -1,0 +1,123 @@
+/* 对小代码块颜色设置 */
+.content__default {
+  code {
+    color: #3eaf7c !important
+    background-color: rgb(40, 40, 40) !important;
+  }
+}
+
+div[class*="language-"], .line-numbers-mode {
+    background-color: rgb(40, 40, 40) !important;
+}
+div[class*="language-"].line-numbers-mode::after {
+    // display: none;
+    height: 100% - 2px;
+    background-color: rgb(40, 40, 40) !important;
+    border: 1px solid rgb(50, 50, 50) !important;
+    box-sizing: border-box;
+}
+div[class*="language-"].line-numbers-mode .line-numbers-wrapper {
+    // border-right: 1px solid #e7e9e8;
+}
+div[class*="language-"].line-numbers-mode .line-numbers-wrapper .line-number {
+    color: #838282 !important;
+}
+.content__default pre, .content__default pre[class*=language-] {
+    background-color: rgb(40, 40, 40) !important;
+    line-height: 1.4;
+    padding: 1.25rem 1.5rem;
+    margin: .85rem 0;
+    border-radius: 6px;
+    overflow: auto;
+    font-size: 15px;
+    border: 1px solid rgb(50, 50, 50);
+}
+
+pre::-webkit-scrollbar-thumb
+    border-radius: 6px !important;
+pre::-webkit-scrollbar-track
+    margin-left: 2.5rem !important;
+    margin-right: 1px !important;
+
+.content__default pre code, .content__default pre[class*="language-"] code {
+    background-color: rgb(40, 40, 40) !important;
+    color: #abb2bf !important;
+}
+
+
+.token.punctuation {
+    color: #999 !important;    
+}
+
+.token.attr-value,
+.token.builtin,
+.token.char,
+.token.selector,
+.token.string {
+    color: #690 !important;    
+}
+
+
+.token.namespace {
+    color: #d19a66 !important;
+}
+
+.token.function,
+.token.annotation {
+    color: #61aeee !important;
+}
+
+.token.comment {
+    color: #838282 !important
+}
+
+.token.class-name,
+.token.constant,
+.token.value {
+    color: #abb2bf !important
+}
+
+.token.variable {
+    color: #C98A7D !important;
+}
+
+.token.boolean,
+.token.number,
+.token.property,
+.token.regex,
+.token.symbol {
+    color: #98c379 !important;
+}
+
+.token.atrule,
+.token.keyword {
+    color: #c678dd !important;
+}
+
+.token.important,
+.token.tag,
+.token.deleted {
+
+    color: #e06c75 !important;
+}
+
+.token.attr-name {
+    color: #d19a66 !important;
+}
+
+.token.operator {
+    color: #690 !important;
+}
+
+.token.url,
+.token.entity {
+    color: #67cdcc !important;
+}
+
+
+/* 细化处理 sh */
+.language-sh {
+    .token.function {
+        color: #2869c9 !important;
+    }
+}

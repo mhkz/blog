@@ -1,0 +1,104 @@
+/* 对小代码块颜色设置 */
+.content__default {
+  code {
+    color: #E96910 !important
+    background-color: rgb(249 249 249) !important;
+  }
+}
+
+div[class*="language-"], .line-numbers-mode {
+    background-color: #fdfdfd !important;
+}
+div[class*="language-"].line-numbers-mode::after {
+    display: none;
+}
+div[class*="language-"].line-numbers-mode .line-numbers-wrapper {
+    border-right: 1px solid #187d210f;
+}
+div[class*="language-"].line-numbers-mode .line-numbers-wrapper .line-number {
+    color: #838282 !important;
+}
+.content__default pre, .content__default pre[class*=language-] {
+    background-color: #fdfdfd !important;
+    line-height: 1.4;
+    padding: 1.25rem 1.5rem;
+    margin: .85rem 0;
+    border-radius: 6px;
+    overflow: auto;
+    font-size: 15px;
+    border: 1px solid #E7E9E8;
+}
+
+.content__default pre code, .content__default pre[class*="language-"] code {
+    background-color: #fdfdfd !important;
+    color: #1b1f1f !important;
+}
+
+.token.function,
+.token.namespace,
+.token.annotation,
+.token.punctuation {
+    color: #1b1f1f !important;
+}
+
+.token.comment {
+    color: #0FA567 !important
+}
+
+.token.class-name,
+.token.constant,
+.token.symbol,
+.token.value,
+.token.property {
+    color: #9020cc !important
+}
+
+.token.boolean,
+.token.number,
+.token.string, 
+.token.char, 
+.token.attr-value, 
+.token.regex, 
+.token.variable {
+    color: #f78000 !important;
+}
+
+.token.atrule,
+.token.builtin,
+.token.important,
+.token.keyword,
+.token.selector,
+.token.atrule,
+.token.tag,
+.token.deleted {
+
+    color: #2869c9 !important;
+}
+
+.token.operator {
+    color: #093a84 !important;
+}
+
+.token.url,
+.token.entity {
+    color: #67cdcc !important;
+}
+
+.token.attr-name {
+    color: #680;
+}
+
+
+/* 细化处理 sh */
+.language-sh {
+    .token.function {
+        color: #2869c9 !important;
+    }
+}
+
+/* 细化处理 cpp */
+.language-cpp {
+    .token.function {
+        color: #9020cc !important
+    }
+}

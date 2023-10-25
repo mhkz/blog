@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "SF Mono";
+    font-weight: lighter;
+    unicode-range: U+00-7F;
+    src: url("SFMonoLight.otf");
+}
+@font-face {
+    font-family: "SF Mono";
+    font-weight: normal;
+    unicode-range: U+00-7F;
+    src: url("SFMonoRegular.otf");
+}
+@font-face {
+    font-family: "SF Mono";
+    font-weight: bold;
+    unicode-range: U+00-7F;
+    src: url("SFMonoBold.otf")
+}
+@font-face {
+    font-family: "SF Mono";
+    font-weight: lighter;
+    font-style: italic;
+    unicode-range: U+00-7F;
+    src: url("SFMonoLightItalic.otf");
+}
+@font-face {
+    font-family: "SF Mono";
+    font-weight: normal;
+    font-style: italic;
+    unicode-range: U+00-7F;
+    src: url("SFMonoRegularItalic.otf");
+}
+@font-face {
+    font-family: "SF Mono";
+    font-weight: bold;
+    font-style: italic;
+    unicode-range: U+00-7F;
+    src: url("SFMonoBoldItalic.otf")
+}
+
+
+
+/* 
+@font-face {
+    font-family: "SF Mono";
+    font-weight: bold;
+    font-style: normal;
+    src: url("SFMonoRegular.otf");
+}
+@font-face {
+    font-family: "SF Mono";
+    font-weight: bolder;
+    font-style: normal;
+    src: url("SFMonoBold.otf");
+}
+@font-face {
+    font-family: "SF Mono";
+    font-weight: normal;
+    font-style: italic;
+    src: url("SFMonoLightItalic.otf");
+}
+@font-face {
+    font-family: "SF Mono";
+    font-weight: bold;
+    font-style: italic;
+    src: url("SFMonoRegularItalic.otf");
+}
+@font-face {
+    font-family: "SF Mono";
+    font-weight: bolder;
+    font-style: italic;
+    src: url("SFMonoBoldItalic.otf");
+} */

@@ -1,0 +1,8 @@
+{
+    "editor.fontSize": 15,
+    "editor.fontFamily": "SF mono",
+    "editor.cursorStyle": "line",
+    "editor.tabSize": 4,
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.fontFamily": "SF mono"
+}

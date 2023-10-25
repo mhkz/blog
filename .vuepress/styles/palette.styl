@@ -1,0 +1,110 @@
+@import "codetheme/vue-light.styl"
+
+// 颜色
+$accentColor = #3eaf7c
+$textColor = #2c3e50
+$borderColor = #eaecef
+$codeBgColor = #282c34
+$arrowBgColor = #ccc
+$badgeTipColor = #42b983
+$badgeWarningColor = darken(#ffe564, 35%)
+$badgeErrorColor = #DA5961
+
+// 布局
+$navbarHeight = 3.6rem
+$sidebarWidth = 15rem
+$contentWidth = 740px
+$homePageWidth = 100rem
+
+// 响应式变化点
+$MQNarrow = 959px
+$MQMobile = 719px
+$MQMobileNarrow = 419px
+
+$globalFont = MiSans, Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$codeFont = "SF Mono", "Jetbrains mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+/* 全局字体 */
+body
+  font-family: $globalFont !important;
+
+/* 整体代码块字体 */
+code, code[class*="language-"], pre, pre[class*="language-"]
+  font-family: $codeFont !important
+
+.vssue
+  box-shadow: var(--box-shadow)
+  border-radius: 10px
+  max-width: 100rem
+  font-family: $globalFont
+
+/* 
+   文章页面与侧边栏之间的关系 
+   -- 夹带动态页面大小 
+*/
+
+.page, .password-wrapper-in
+    overflow-x: hidden;
+    margin-left: 16rem;
+.sidebar
+    width: 16rem
+    font-size: 15px
+a.sidebar-link
+    line-height: 1.2rem
+.vssue
+    font-size: 15px
+
+@media (max-width: 959px)
+  .page, .password-wrapper-in
+    margin-left: 14rem
+  .sidebar
+    width: 14rem
+    font-size: 13px
+  a.sidebar-link
+    line-height: 1rem
+  .vssue .vssue-new-comment .vssue-new-comment-input
+    font-size: 13px
+
+@media (max-width: 719px)
+  .page, .password-wrapper-in
+    margin-left: 0rem
+  .vssue .vssue-new-comment .vssue-new-comment-input
+    font-size: 12px
+
+.vssue .vssue-new-comment
+  font-family: $globalFont
+  font-size: 15px
+
+.vssue-body img {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.DocSearch.DocSearch-Button {
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+  vertical-align: top;
+  width: 12.625rem;
+  cursor: text;
+  height: 2.124rem;
+  color: #5b5b5b;
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  font-size: .9rem;
+  line-height: 2.12rem;
+  padding: 0 .5rem 0 1.4rem;
+  outline: none;
+  transition: all .2s ease;
+  background: var(--background-color) url(/assets/img/search.83621669.svg) .6rem .5rem no-repeat;
+  background-size: 1rem;
+  text-align: left;
+  margin-left: 0;
+  margin-top: .1em;
+  .DocSearch-Button-Keys {
+    display: none;
+  }
+  .DocSearch-Button-Placeholder, .DocSearch-Search-Icon {
+    display: none;
+  }
+}
