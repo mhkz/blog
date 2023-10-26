@@ -16,7 +16,7 @@ rsync -az -e 'ssh -p 2023' --delete docs/.vuepress/dist/  \
 sleep 5
 
 # 刷新
-doge flush path -p "https://wiki.eryajf.net/"
+doge flush path -p "https://mhkz.github.io/blog/"
 doge flush path -p "https://comment.eryajf.net/"
 
 # 更新检索的索引数据

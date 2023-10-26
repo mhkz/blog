@@ -38,7 +38,7 @@ jobs:
   #   steps:
   #     - name: Test Connect
   #       run: |
-  #         curl https://wiki.eryajf.net/ --connect-timeout 5
+  #         curl https://mhkz.github.io/blog/ --connect-timeout 5
 
   # scrape-docs:
   #   needs: test_website

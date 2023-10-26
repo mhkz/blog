@@ -1,6 +1,6 @@
 // set your global feed options - override in page frontmatter `feed`
 const feed_options = {
-  canonical_base: 'https://wiki.eryajf.net',
+  canonical_base: 'https://mhkz.github.io/blog',
   count: 5000,
 };
 
@@ -8,7 +8,7 @@ const autometa_options = {
   site: {
     name: 'Eryajf',
   },
-  canonical_base: 'https://wiki.eryajf.net',
+  canonical_base: 'https://mhkz.github.io/blog',
 };
 
 // 插件配置
@@ -50,7 +50,7 @@ module.exports = [
   //       },
   //       {
   //         title: '通过百度搜索本站的',
-  //         frontUrl: `https://www.baidu.com/s?wd=site%3Awiki.eryajf.net%20`,
+  //         frontUrl: `https://www.baidu.com/s?wd=site%3Ahttps://mhkz.github.io/blog%20`,
   //       },
   //     ],
   //   }
@@ -71,10 +71,10 @@ module.exports = [
     "dynamic-title",
     {
       showIcon:
-        "https://wiki.eryajf.net/img/favicon.ico",
+        "https://mhkz.github.io/blog/img/favicon.ico",
       showText: "ヾ(≧▽≦*)o欢迎回来！",
       hideIcon:
-        "https://wiki.eryajf.net/img/favicon.ico",
+        "https://mhkz.github.io/blog/img/favicon.ico",
       hideText: "ಥ_ಥ不要走呀！",
       recoverTime: 2000, //  持续时间
     },
@@ -136,7 +136,7 @@ module.exports = [
   'vuepress-plugin-mermaidjs',
   [
     'sitemap', {
-      hostname: 'https://wiki.eryajf.net',
+      hostname: 'https://mhkz.github.io/blog',
       exclude: ["/404.html"],
     },
   ],
@@ -173,7 +173,7 @@ module.exports = [
 
   // 站点地图
   // 'robots', {
-  //   host: "https://wiki.eryajf.net",
+  //   host: "https://mhkz.github.io/blog",
   //   disallowAll: false,
   //   allowAll: true,
   //   sitemap: "/sitemap.xml",

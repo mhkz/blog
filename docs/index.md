@@ -27,7 +27,7 @@ features: # 可选的
 ---
 
 <!-- ::: v-pre
-<iframe height="400" style="width: 100%;" scrolling="no" title="轮播展示" src="https://wiki.eryajf.net/lunbo/lunbo.html"></iframe>
+<iframe height="400" style="width: 100%;" scrolling="no" title="轮播展示" src="https://mhkz.github.io/blog/lunbo/lunbo.html"></iframe>
 ::: -->
 
 
