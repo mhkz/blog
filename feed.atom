@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://wiki.eryajf.net</id>
+    <id>https://mhkz.github.io/blog</id>
     <title>郭峰博客</title>
-    <updated>2023-10-26T14:48:08.862Z</updated>
+    <updated>2023-10-26T14:49:56.381Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
-    <link rel="alternate" href="https://wiki.eryajf.net"/>
-    <link rel="self" href="https://wiki.eryajf.net/feed.atom"/>
+    <link rel="alternate" href="https://mhkz.github.io/blog"/>
+    <link rel="self" href="https://mhkz.github.io/blog/feed.atom"/>
     <subtitle>💻学习📝记录🔗分享
 学无止境是永远前进的基础，跃然纸上是对知识的总结交代，与众分享则是实现价值的最好方式。</subtitle>
     <entry>
         <title type="html"><![CDATA[博客导引]]></title>
-        <id>https://wiki.eryajf.net/pages/b2f34c/</id>
-        <link href="https://wiki.eryajf.net/pages/b2f34c/">
+        <id>https://mhkz.github.io/blog/pages/b2f34c/</id>
+        <link href="https://mhkz.github.io/blog/pages/b2f34c/">
         </link>
         <updated>2023-02-13T10:56:00.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[无题]]></title>
-        <id>https://wiki.eryajf.net/pages/5f559d/</id>
-        <link href="https://wiki.eryajf.net/pages/5f559d/">
+        <id>https://mhkz.github.io/blog/pages/5f559d/</id>
+        <link href="https://mhkz.github.io/blog/pages/5f559d/">
         </link>
         <updated>2022-07-02T23:28:29.000Z</updated>
     </entry>

@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>郭峰博客</title>
-        <link>https://wiki.eryajf.net</link>
+        <link>https://mhkz.github.io/blog</link>
         <description>💻学习📝记录🔗分享
 学无止境是永远前进的基础，跃然纸上是对知识的总结交代，与众分享则是实现价值的最好方式。</description>
-        <lastBuildDate>Thu, 26 Oct 2023 14:48:08 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 26 Oct 2023 14:49:56 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
-        <atom:link href="https://wiki.eryajf.net/feed.atom" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://mhkz.github.io/blog/feed.atom" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[博客导引]]></title>
-            <link>https://wiki.eryajf.net/pages/b2f34c/</link>
-            <guid>https://wiki.eryajf.net/pages/b2f34c/</guid>
+            <link>https://mhkz.github.io/blog/pages/b2f34c/</link>
+            <guid>https://mhkz.github.io/blog/pages/b2f34c/</guid>
             <pubDate>Mon, 13 Feb 2023 10:56:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[无题]]></title>
-            <link>https://wiki.eryajf.net/pages/5f559d/</link>
-            <guid>https://wiki.eryajf.net/pages/5f559d/</guid>
+            <link>https://mhkz.github.io/blog/pages/5f559d/</link>
+            <guid>https://mhkz.github.io/blog/pages/5f559d/</guid>
             <pubDate>Sat, 02 Jul 2022 23:28:29 GMT</pubDate>
         </item>
     </channel>

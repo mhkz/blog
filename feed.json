@@ -1,19 +1,19 @@
 {
     "version": "https://jsonfeed.org/version/1",
     "title": "郭峰博客",
-    "home_page_url": "https://wiki.eryajf.net",
-    "feed_url": "https://wiki.eryajf.net/feed.json",
+    "home_page_url": "https://mhkz.github.io/blog",
+    "feed_url": "https://mhkz.github.io/blog/feed.json",
     "description": "💻学习📝记录🔗分享\n学无止境是永远前进的基础，跃然纸上是对知识的总结交代，与众分享则是实现价值的最好方式。",
     "items": [
         {
-            "id": "https://wiki.eryajf.net/pages/b2f34c/",
-            "url": "https://wiki.eryajf.net/pages/b2f34c/",
+            "id": "https://mhkz.github.io/blog/pages/b2f34c/",
+            "url": "https://mhkz.github.io/blog/pages/b2f34c/",
             "title": "博客导引",
             "date_modified": "2023-02-13T10:56:00.000Z"
         },
         {
-            "id": "https://wiki.eryajf.net/pages/5f559d/",
-            "url": "https://wiki.eryajf.net/pages/5f559d/",
+            "id": "https://mhkz.github.io/blog/pages/5f559d/",
+            "url": "https://mhkz.github.io/blog/pages/5f559d/",
             "title": "无题",
             "date_modified": "2022-07-02T23:28:29.000Z"
         }
