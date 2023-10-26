@@ -78,7 +78,7 @@ module.exports = {
   },
   blogger: {
     // 博主信息，显示在首页侧边栏
-    avatar: '/img/dengxia.gif',
+    avatar: 'https://guofeng-blog.oss-cn-shanghai.aliyuncs.com/me/dengxia.gif',
     name: '挥码天涯',
     slogan: '以梦为马，挥码天涯',
   },
