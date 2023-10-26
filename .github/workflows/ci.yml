@@ -22,7 +22,7 @@ jobs:
           node-version: 16
       - run: |
           npm install
-          yarn build
+          npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
