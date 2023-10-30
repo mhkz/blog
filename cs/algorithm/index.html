@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>01.实现一个链表结构 | 郭峰博客</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/blog/img/favicon.ico">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_3114978_qe0b39no76.css">
+    <script language="javascript" type="text/javascript" src="/blog/js/pgmanor-self.js"></script>
+    <link rel="alternate" type="application/rss+xml" href="https://mhkz.github.io/blog/rss.xml" title="郭峰博客 RSS Feed">
+    <link rel="alternate" type="application/atom+xml" href="https://mhkz.github.io/blog/feed.atom" title="郭峰博客 Atom Feed">
+    <link rel="alternate" type="application/json" href="https://mhkz.github.io/blog/feed.json" title="郭峰博客 JSON Feed">
+    <meta name="description" content="/**
+ 实现一个链表结构
+ @author guofeng
+ 添加元素：
+ 链表头： O(1)
+ 链表尾： O(n)
+ 删除头: O(1)
+ 删除尾： O(n)
+ 修改： O(n)
+ 查找：O(n)
+ */">
+    <meta name="twitter:title" content="01.实现一个链表结构">
+    <meta name="twitter:description" content="/**
+ 实现一个链表结构
+ @author guofeng
+ 添加元素：
+ 链表头： O(1)
+ 链表尾： O(n)
+ 删除头: O(1)
+ 删除尾： O(n)
+ 修改： O(n)
+ 查找：O(n)
+ */">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://mhkz.github.io/blog/02.CsSystem/021.linkedList.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="01.实现一个链表结构">
+    <meta property="og:description" content="/**
+ 实现一个链表结构
+ @author guofeng
+ 添加元素：
+ 链表头： O(1)
+ 链表尾： O(n)
+ 删除头: O(1)
+ 删除尾： O(n)
+ 修改： O(n)
+ 查找：O(n)
+ */">
+    <meta property="og:url" content="https://mhkz.github.io/blog/02.CsSystem/021.linkedList.html">
+    <meta property="og:site_name" content="Eryajf">
+    <meta property="article:published_time" content="2023-10-30T17:02:12.000Z">
+    <meta property="article:tag" content="null">
+    <meta itemprop="name" content="01.实现一个链表结构">
+    <meta itemprop="description" content="/**
+ 实现一个链表结构
+ @author guofeng
+ 添加元素：
+ 链表头： O(1)
+ 链表尾： O(n)
+ 删除头: O(1)
+ 删除尾： O(n)
+ 修改： O(n)
+ 查找：O(n)
+ */">
+    <meta name="keywords" content="郭峰博客，以梦为马，挥马天涯">
+    <meta name="baidu-site-verification" content="code-LTKHwOecxI">
+    <meta name="theme-color" content="#11a8cd">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.0f352843.css" as="style"><link rel="preload" href="/blog/assets/js/app.e494eff3.js" as="script"><link rel="preload" href="/blog/assets/js/3.7c1e6849.js" as="script"><link rel="preload" href="/blog/assets/js/36.12e97790.js" as="script"><link rel="preload" href="/blog/assets/js/9.af6ecc06.js" as="script"><link rel="preload" href="/blog/assets/js/5.76b2826e.js" as="script"><link rel="preload" href="/blog/assets/js/6.4058d6db.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.1d7de10b.js"><link rel="prefetch" href="/blog/assets/js/11.75a8be59.js"><link rel="prefetch" href="/blog/assets/js/12.709cde72.js"><link rel="prefetch" href="/blog/assets/js/13.9eda8228.js"><link rel="prefetch" href="/blog/assets/js/14.1ac989d7.js"><link rel="prefetch" href="/blog/assets/js/15.f01f750f.js"><link rel="prefetch" href="/blog/assets/js/16.6eddecc6.js"><link rel="prefetch" href="/blog/assets/js/17.99fd685e.js"><link rel="prefetch" href="/blog/assets/js/18.e720bb7f.js"><link rel="prefetch" href="/blog/assets/js/19.132e17f6.js"><link rel="prefetch" href="/blog/assets/js/20.413e7c57.js"><link rel="prefetch" href="/blog/assets/js/21.76b9b51e.js"><link rel="prefetch" href="/blog/assets/js/22.f57a4a55.js"><link rel="prefetch" href="/blog/assets/js/23.a0fbe10d.js"><link rel="prefetch" href="/blog/assets/js/24.c8d98af0.js"><link rel="prefetch" href="/blog/assets/js/25.149aecf6.js"><link rel="prefetch" href="/blog/assets/js/26.3d61e5fd.js"><link rel="prefetch" href="/blog/assets/js/27.bed98284.js"><link rel="prefetch" href="/blog/assets/js/28.cfb8d0d8.js"><link rel="prefetch" href="/blog/assets/js/29.85b4db1c.js"><link rel="prefetch" href="/blog/assets/js/30.f574fb1e.js"><link rel="prefetch" href="/blog/assets/js/31.68f12894.js"><link rel="prefetch" href="/blog/assets/js/32.db49e45f.js"><link rel="prefetch" href="/blog/assets/js/33.10e0eb33.js"><link rel="prefetch" href="/blog/assets/js/34.c0cb17f2.js"><link rel="prefetch" href="/blog/assets/js/35.a3ad1a0e.js"><link rel="prefetch" href="/blog/assets/js/37.bce83bb5.js"><link rel="prefetch" href="/blog/assets/js/38.eb0e603b.js"><link rel="prefetch" href="/blog/assets/js/39.11cf1ebb.js"><link rel="prefetch" href="/blog/assets/js/4.3e5a44b4.js"><link rel="prefetch" href="/blog/assets/js/40.ce3c4dfe.js"><link rel="prefetch" href="/blog/assets/js/41.16a94a6b.js"><link rel="prefetch" href="/blog/assets/js/42.8f905a93.js"><link rel="prefetch" href="/blog/assets/js/43.588870fb.js"><link rel="prefetch" href="/blog/assets/js/44.1105112d.js"><link rel="prefetch" href="/blog/assets/js/45.5e0de190.js"><link rel="prefetch" href="/blog/assets/js/46.b2a25e16.js"><link rel="prefetch" href="/blog/assets/js/47.6697cbe1.js"><link rel="prefetch" href="/blog/assets/js/48.c7cc9ffe.js"><link rel="prefetch" href="/blog/assets/js/49.2eb7748e.js"><link rel="prefetch" href="/blog/assets/js/7.9a46cc9f.js"><link rel="prefetch" href="/blog/assets/js/8.e04a6eef.js"><link rel="prefetch" href="/blog/assets/js/vendors~docs-searchbar.eed59293.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.0f352843.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="郭峰博客" class="logo"> <span class="site-name can-hide">郭峰博客</span></a> <div class="links"><form id="search-form" role="search" class="meilisearch-search-wrapper search-box theme-false"><input id="meilisearch-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">首页</a></div><div class="nav-item"><a href="/blog/leetcode/" class="nav-link">LeetCode</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CsSystem" class="dropdown-title"><!----> <span class="title" style="display:;">CsSystem</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/algorithm/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Algorithm</a></li></ul></div></div> <a href="https://github.com/mhkz/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://guofeng-blog.oss-cn-shanghai.aliyuncs.com/me/dengxia.gif"> <div class="blogger-info"><h3>挥码天涯</h3> <span>以梦为马，挥码天涯</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">首页</a></div><div class="nav-item"><a href="/blog/leetcode/" class="nav-link">LeetCode</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CsSystem" class="dropdown-title"><!----> <span class="title" style="display:;">CsSystem</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/cs/algorithm/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Algorithm</a></li></ul></div></div> <a href="https://github.com/mhkz/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/blog/cs/algorithm/" aria-current="page" class="active sidebar-link">01.实现一个链表结构</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/blog/cs/algorithm/#链表的实现" class="sidebar-link">链表的实现</a></li></ul></li><li><a href="/blog/pages/dca31a/" class="sidebar-link">2.实现一个Stack</a></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper bg-style-6"><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/blog/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/blog/categories/?category=CsSystem" title="分类" data-v-06225672>CsSystem</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://github.com/blog" target="_blank" title="作者" class="beLink" data-v-06225672>feng.guo</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2023-10-30</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">01.实现一个链表结构<!----></h1> <div class="page-slot page-slot-top"><div style="
+  color:#f56c6c;
+  letter-spacing:0;
+  background: #fef0f0;
+  border-radius: 4px;
+  border: solid 1px;
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 0;
+  box-sizing: border-box;
+">
+  文章发布较早，内容可能过时，阅读注意甄别。
+</div></div> <div class="theme-vdoing-content content__default"><h2 id="链表的实现"><a href="#链表的实现" class="header-anchor">#</a> 链表的实现</h2> <p>/**</p> <ul><li>实现一个链表结构</li> <li>@author guofeng</li> <li>添加元素：</li> <li>链表头： O(1)</li> <li>链表尾： O(n)</li> <li>删除头: O(1)</li> <li>删除尾： O(n)</li> <li>修改： O(n)</li> <li>查找：O(n)</li> <li></li></ul> <p>*/</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>public class LinkedList&lt;E&gt; {
+	private class Node {
+		private E e;
+		private Node next;
+		
+		public Node(E e, Node next) {
+			this.e = e;
+			this.next = next;
+		}
+		public Node(E e) {
+			this(e, null);
+		}
+		public Node() {
+			this(null, null);
+		}
+		
+		@Override
+		public String toString() {
+			return e.toString();
+		}
+	}
+	
+	// 为链表添加一个元素，在链表头添加是最方便的
+	private int size = 0;
+//	private Node head = null;
+	private Node dummyHead; 
+	public LinkedList () {
+		dummyHead = new Node(null, null);
+		size = 0;
+	}
+	
+	public int getSize() {
+		return size;
+	}
+	
+	public boolean isEmpty() {
+		return size == 0;
+	}
+	
+	// 为链表头添加一个元素
+	public void addFirst(E e) {
+		add(0, e);
+	}
+	
+	// 在其它位置添加链表
+	public void add(int index, E e) {
+		if(index &lt; 0 || index &gt; size) {
+			throw new IllegalArgumentException(&quot;Add failed. Illegal index.&quot;);
+		}
+		Node prev = dummyHead;
+		for(int i = 0; i &lt; index; i ++) {
+			prev = prev.next;
+		}
+//		Node node = new Node(e);
+//		node.next = prev.next;
+//		prev.next = node;
+//		上面写法等于下面写法
+		prev.next = new Node(e, prev.next);
+		// 维护下size
+		size ++;
+	}
+	
+	// 在链表末尾添加元素
+	public void addLast(E e) {
+		add(size, e);
+	}
+	
+	// 获取链表中的第 index 个位置的元素
+	// 不常用，只是练习用
+	
+	public E get(int index) {
+		Node cur = dummyHead.next;
+		for(int i = 0; i &lt; index; i ++) {
+			cur = cur.next;
+		}
+		return cur.e;
+	}
+	
+	// 获取链表的第一个元素
+	public E getFirst() {
+		return get(0);
+	}
+	
+	// 获取链表中的最后一个元素
+	public E getLast() {
+		return get(size - 1);
+	}
+	
+	// 修改链表中第index 个元素
+	public void set(int index, E e) {
+		if(index &lt; 0 || index &gt;= size) {
+			throw new IllegalArgumentException(&quot;set failed, Illegal index.&quot;);
+		}
+		
+		Node cur = dummyHead.next;
+		for(int i = 0; i &lt; index; i ++) {
+			cur = cur.next;
+		}
+		cur.e = e;
+	}
+	
+	// 查找链表中是否有元素e
+	public boolean contains(E e) {
+		Node cur = dummyHead.next;
+		while(cur != null) {
+			if(cur.e.equals(e)) {
+				return true;
+			}
+			cur = cur.next;
+		}
+		return false;
+	}
+	
+	// 删除链表中第index个元素
+	public E remove(int index) {
+		Node pre = dummyHead;
+		if(index &lt; 0 || index &gt;= size) {
+			throw new IllegalArgumentException(&quot;set failed, Illegal index.&quot;);
+		}
+		for(int i = 0; i &lt; index; i ++) {
+			pre = pre.next;
+		}
+		Node retNode = pre.next;
+		pre.next = retNode.next;
+		retNode.next = null;
+		size --;
+		return retNode.e;
+	}
+	
+	// 删除链表中的第一个元素
+	public E removeFirst() {
+		return remove(0);
+	}
+	
+	// 删除链表中的最后一个元素
+	public E removeLast() {
+		System.out.println(&quot;size: &quot;+ size);
+		return remove(size - 1);
+	}
+	
+	// 链表的遍历
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		Node cur = dummyHead.next;
+		while(cur != null) {
+			sb.append(cur + &quot;-&gt;&quot;);
+			cur = cur.next;
+		}
+		sb.append(&quot;NULL&quot;);
+		return sb.toString();
+	}
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br></div></div></div></div> <div class="page-slot page-slot-bottom"><div class="donation">
+  <button>打赏</button>
+  <div class="main">
+      <div class="pic">
+          <img src="https://t.eryajf.net/imgs/2023/01/834f12107ebc432a.png" alt="微信">
+          <img src="https://t.eryajf.net/imgs/2023/01/fc21022aadd292ca.png" alt="支付宝">
+      </div>
+  </div>
+</div></div> <div class="page-edit"><!----> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2023/10/30, 17:17:05</span></div></div> <div class="page-nav-wapper"><!----> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/blog/pages/dca31a/">2.实现一个Stack</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/blog/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/blog/pages/dca31a/"><div>
+            2.实现一个Stack
+            <!----></div></a> <span class="date">10-30</span></dt></dl><dl><dd>02</dd> <dt><a href="/blog/pages/b2f34c/"><div>
+            博客导引
+            <!----></div></a> <span class="date">02-13</span></dt></dl><dl><dd>03</dd> <dt><a href="/blog/pages/5f559d/"><div>
+            无题
+            <!----></div></a> <span class="date">07-02</span></dt></dl> <dl><dd></dd> <dt><a href="/blog/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="https://github.com/mhkz" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="mailto:one778@163.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/mhkz/rss.xml" title="订阅" target="_blank" class="iconfont icon-rss"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2023-2023
+    <span></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><canvas id="vuepress-canvas-cursor"></canvas><!----><div></div><div></div><div></div><div></div><div></div></div></div>
+    <script src="/blog/assets/js/app.e494eff3.js" defer></script><script src="/blog/assets/js/3.7c1e6849.js" defer></script><script src="/blog/assets/js/36.12e97790.js" defer></script><script src="/blog/assets/js/9.af6ecc06.js" defer></script><script src="/blog/assets/js/5.76b2826e.js" defer></script><script src="/blog/assets/js/6.4058d6db.js" defer></script>
+  </body>
+</html>
