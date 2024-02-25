@@ -23,8 +23,8 @@ module.exports = [
   [
     'vuepress-plugin-meilisearch',
       {
-          hostUrl: 'https://search.eryajf.net',        // 该 URL 应该能在用户的浏览器上被访问，不能为 localhost
-          apiKey: "8d05703c1896278c2507375b47b8bf4d8366ad00b2a1e7a24c5fcc38744af48d",
+          hostUrl: '',        // 该 URL 应该能在用户的浏览器上被访问，不能为 localhost
+          apiKey: "",
           indexUid: 'wiki',
           // placeholder: 'Search as you type...',   // 在搜索栏中显示的占位符
           maxSuggestions: 6,                      // 最多显示几个搜索结果
@@ -162,8 +162,8 @@ module.exports = [
       {
         choosen: 'artalk',
         options: {
-            server: 'https://comment.eryajf.net',
-            site: '二丫讲梵',
+            server: '',
+            site: '',
             disableEmotion: false,
             disablePreview: false,
             disablePicture: true
