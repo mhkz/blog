@@ -6,7 +6,7 @@ const feed_options = {
 
 const autometa_options = {
   site: {
-    name: 'Eryajf',
+    name: '郭峰博客',
   },
   canonical_base: 'https://mhkz.github.io/blog',
 };
@@ -128,7 +128,7 @@ module.exports = [
   [
     'vuepress-plugin-baidu-tongji',
     {
-      hm: 'f8fd5c4e21ca384b4785396a87bcc468',
+      hm: '',
     },
   ],
 
