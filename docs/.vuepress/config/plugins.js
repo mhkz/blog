@@ -11,7 +11,7 @@ const autometa_options = {
   canonical_base: 'https://mhkz.github.io/blog',
 };
 
-// 插件配置
+// 插件配置...
 module.exports = [
   // 百度自动推送
   'vuepress-plugin-baidu-autopush',
